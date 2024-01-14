@@ -43,7 +43,7 @@ nav .navber {
 }
 
 nav .navber li {
-    margin-right: 30px;
+    margin-right: 20px;
     list-style: none;
     text-decoration: none;
     padding-top: 10px;
@@ -61,9 +61,11 @@ nav .navber li {
     justify-content: space-between;
     align-items: center;
 }
-.banner .banner-content{
+
+.banner .banner-content {
     padding-right: 210px;
 }
+
 .banner .banner-title {
     font-size: 3.3rem;
     font-weight: 700;
@@ -76,24 +78,95 @@ nav .navber li {
     font-weight: 600px;
     max-width: 500px;
 }
-.banner .banner-img{
+
+.banner .banner-img {
     background-image: url(images/Circle\ design.svg);
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 400px;
 }
-/* .banner .banner-img img{
-    width: 100%;
-} */
 
+.banner .banner-img img {
+    width: 100%;
+}
+
+main {
+    max-width: 1440px;
+    margin: 70px auto;
+}
+
+.sponsores .sponsre-img {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
+.product-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.product-container .product-heading{
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #3A3A3A;
+    margin-bottom: 30px;
+}
+
+.product-container .product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+.product-container .product-content .product-card{
+    text-align: left;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+}
+.product-container .product-content .product-card img:nth-child(1){
+width: 100%;
+}
+.product-container .product-content .product-card .product-name{
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #18191F;
+}
+.product-container .product-content .product-card .product-price{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.product-container .product-content .product-card .product-details{
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: 0.252px;
+    color: #787885;
+}
 
 @media screen and (max-width: 576px) {
-    header, .banner-content {
+
+    header,
+    .banner .banner-content {
         padding: 20px;
     }
 
-    nav, .banner {
+    nav,
+    .banner {
         flex-direction: column;
+    }
+
+    nav .navber li {
+        margin-right: 10px;
+    }
+
+    .sponsores .sponsre-img {
+        flex-wrap: wrap;
+    }
+    .product-container .product-content{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -102,7 +175,15 @@ nav .navber li {
         padding: 20px;
     }
 
-    nav, .banner{
+    nav,
+    .banner {
         flex-direction: column;
+    }
+
+    .sponsores .sponsre-img {
+        flex-wrap: wrap;
+    }
+    .product-container .product-content{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
